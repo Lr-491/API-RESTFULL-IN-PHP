@@ -1,0 +1,7 @@
+# GET
+curl http://localhost/api/users
+
+# POST
+curl -X POST -H "Content-Type: application/json" \
+    -d '{"name":"Alice","email":"alice@example.com"}' \
+    http://localhost/api/users
