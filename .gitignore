@@ -1,0 +1,23 @@
+/vendor/
+# Dependances Node
+node_modules/
+
+# Build/output
+dist/
+build/
+.cache/
+.next/
+out/
+
+# Environnements
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Rapports de diagnostic
+report.*.json
