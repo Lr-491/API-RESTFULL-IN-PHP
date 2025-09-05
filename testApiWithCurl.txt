@@ -1,7 +1,13 @@
 # GET
-curl http://localhost/api/users
+curl http://localhost/api_rest/users
 
 # POST
 curl -X POST -H "Content-Type: application/json" \
     -d '{"name":"Alice","email":"alice@example.com"}' \
-    http://localhost/api/users
+    http://localhost/api_rest/users
+
+
+#Inscription
+curl -X POST http://localhost/api_rest/auth.php?action=register \
+-H "Content-Type: application/json" \
+-d '{"name": "Alice", "email": "alice@example.com", "password": "123456"}'

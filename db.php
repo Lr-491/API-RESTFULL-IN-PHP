@@ -1,13 +1,14 @@
-<!-- Connexion to MYSQL -->
-
 <?php
 $host = 'localhost';
-$db   = 'test_db';
+$db = 'test_bd';
 $user = 'root';
 $pass = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+    echo "connected";
 } catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
+    http_response_code(500);
+    echo json_encode(['error' => 'Erreur de connexion']);
+    exit;
 }
